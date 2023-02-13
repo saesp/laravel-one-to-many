@@ -17,7 +17,8 @@ class PersonFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'username'=> fake() -> userName(),
+            'mail'=> fake() -> email(),
         ];
     }
 }
