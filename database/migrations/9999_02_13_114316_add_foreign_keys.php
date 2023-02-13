@@ -16,10 +16,8 @@ return new class extends Migration
         Schema::table('posts', function (Blueprint $table) {
             
             // VERSION 1
-            // $table -> bigInteger('user_id') -> unsigned();
-            // $table -> foreign('user_id')
-            //        -> references('id')
-            //        -> on('users');
+            // $table->bigInteger('user_id')->unsigned();
+            // $table->foreign('user_id')->references('id')-> on('users');
 
             // VERSION 2
             $table -> foreignId('person_id') -> constrained();
@@ -27,7 +25,7 @@ return new class extends Migration
 
         Schema::table('person_details', function (Blueprint $table) {
             
-            $table->primary('person_id');
+            // $table->primary('person_id');
 
             $table -> foreignId('person_id') -> constrained();            
         });
