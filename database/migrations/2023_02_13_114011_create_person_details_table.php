@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table -> string('phone', 24) -> nullable();
             $table -> string('address');
-            $table -> string('avatar') -> nullable();
+            $table -> string('userImage') -> nullable();
 
             $table->timestamps();
         });

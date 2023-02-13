@@ -17,7 +17,9 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'description' => fake() -> text(),
+            'image' => fake()->boolean() ? fake()->imageUrl() : null,
+            'publication_dateTime' => fake() -> dateTimeBetween('-30 years', 'now', )
         ];
     }
 }
